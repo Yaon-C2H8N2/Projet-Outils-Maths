@@ -3,9 +3,9 @@ function resI = homemadeInverseFastFourier2D(I)
   tempResI = zeros(M,N);
   resI = zeros(M,N);
   for column=1:N
-    tempResI(:,column) = ifft(I(:,column));
+    tempResI(:,column) = homemadeInverseFastFourier1D(I(:,column));
   endfor
   for line=1:M
-    resI(line,:) = ifft(tempResI(line,:));
+    resI(line,:) = homemadeInverseFastFourier1D(tempResI(line,:));
   endfor
 endfunction
