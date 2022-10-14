@@ -1,6 +1,5 @@
-close all
-clear all
-pkg load image;
+close all;
+clear all;
 
 #generation image 1D de taille 2^N
 n = 4;
