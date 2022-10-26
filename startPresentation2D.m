@@ -2,8 +2,10 @@ close all;
 clear all;
 
 #generation image 2D de taille 2^N
-n = 4;
-I = rand(2**n,2**n);
+n = 5;
+I = imread("Pim.png");
+I = rgb2gray(I);
+I = double(I)/255;
 startDFT = time();
 DFI = homemadeDiscreteFourier2D(I);
 endDFT = time();
